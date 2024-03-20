@@ -1,38 +1,38 @@
 function verificarNumeroPrimo(numero) {
 
-if (numero <= 1) {
+    if (numero <= 1) {
 
-return false;
+        return false;
 
-}
+    }
 
-if (numero <= 3) {
+    if (numero <= 3) {
 
-return true;
+        return true;
 
-}
+    }
 
-if (numero % 2 === 0 || numero % 3 === 0) {
+    if (numero % 2 === 0 || numero % 3 === 0) {
 
-return false;
+        return false;
 
-}
+    }
 
-let i = 5; // A variável i é inicializada com 5, que é o primeiro número primo após 3.
+    let i = 5; // A variável i é inicializada com 5, que é o primeiro número primo após 3.
 
-while (i * i <= numero) {
+    while (i * i <= numero) {
 
-if (numero % i === 0 || numero % (i + 2) === 0) {
+        if (numero % i === 0 || numero % (i + 2) === 0) {
 
-return false;
+            return false;
 
-}
+        }
 
-i += 6; // Adicionar 6 a i a cada iteração, estamos verificando apenas os números que podem ser primos.
+        i += 6; // Adicionar 6 a i a cada iteração, estamos verificando apenas os números que podem ser primos.
 
-}
+    }
 
-return true;
+    return true;
 
 }
 
@@ -56,4 +56,3 @@ console.log(verificarNumeroPrimo(991)); // true
 console.log(verificarNumeroPrimo(104729)); // true
 
 console.log(verificarNumeroPrimo(14348907)); // false
-
