@@ -28,7 +28,7 @@ function verificarNumeroPrimo(numero) {
 
         }
 
-        i += 6; // Adicionar 6 a i a cada iteração, estamos verificando apenas os números que podem ser primos.
+        i += 6; // Adicionar 6 a i a cada iteração.
 
     }
 
