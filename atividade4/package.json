@@ -1,0 +1,13 @@
+{
+    "name": "calculadora",
+    "version": "1.0.0",
+    "description": "Um exemplo de projeto Node.js usando Express",
+    "main": "index.js",
+    "scripts": {
+      "start": "node index.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }
+  
