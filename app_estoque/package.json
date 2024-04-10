@@ -1,0 +1,13 @@
+{
+    "name": "estoque",
+    "version": "1.0.0",
+    "description": "Um exemplo de projeto Node.js usando Express",
+    "main": "app.js",
+    "scripts": {
+      "start": "node app.js"
+    },
+    "dependencies": {
+      "express": "^4.17.1"
+    }
+  }
+  
