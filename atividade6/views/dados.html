@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados Recebidos</title>
+</head>
+<body>
+    <h1>Dados Recebidos</h1>
+
+    <div id="dados-container"> </div>
+
+    <script>
+        
+        function processarDados() {
+            const urlParams = new URLSearchParams(window.location.search);
+
+            if (urlParams.has('nome')) {
+                const nome = urlParams.get('nome');
+                const cep = urlParams.get('cep');
+                const logradouro = urlParams.get('logradouro');
+                const bairro = urlParams.get('bairro');
+                const numero = urlParams.get('numero');
+                const complemento = urlParams.get('complemento');
+                const referencia = urlParams.get('referencia');
+                const cidade = urlParams.get('cidade');
+                const estado = urlParams.get('estado');
+                const telefone = urlParams.get('telefone');
+                const dia = urlParams.get('dia');
+                const mes = urlParams.get('mes');
+                const ano = urlParams.get('ano');
+
+                const dadosHtml = `
+                    <p><strong>Nome:</strong> ${nome}</p>
+                    <p><strong>CEP:</strong> ${cep}</p>
+                    <p><strong>Logradouro:</strong> ${logradouro}</p>
+                    <p><strong>Bairro:</strong> ${bairro}</p>
+                    <p><strong>Número:</strong> ${numero}</p>
+                    <p><strong>Complemento:</strong> ${complemento}</p>
+                    <p><strong>Referência:</strong> ${referencia}</p>
+                    <p><strong>Cidade:</strong> ${cidade}</p>
+                    <p><strong>Estado:</strong> ${estado}</p>
+                    <p><strong>Telefone:</strong> ${telefone}</p>
+                    <p><strong>Data de Agendamento:</strong> ${dia}/${mes}/${ano}</p>
+                `;
+                
+                document.getElementById('dados-container').innerHTML = dadosHtml;
+
+                console.log('Dados Recebidos:');
+                console.log('Nome:', nome);
+                console.log('CEP:', cep);
+                console.log('Logradouro:', logradouro);
+                console.log('Bairro:', bairro);
+                console.log('Número:', numero);
+                console.log('Complemento:', complemento);
+                console.log('Referência:', referencia);
+                console.log('Cidade:', cidade);
+                console.log('Estado:', estado);
+                console.log('Telefone:', telefone);
+                console.log('Data de Agendamento:', `${dia}/${mes}/${ano}`);
+            }
+        }
+        window.addEventListener('DOMContentLoaded', processarDados);
+    </script>
+</body>
+</html>
